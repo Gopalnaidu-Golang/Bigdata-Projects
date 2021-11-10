@@ -34,4 +34,4 @@ df_pyspark.select('coluumnname').show()
 show multiple columns
 df_pyspark.select(['coluumnname1,columnname2]').show()
 df_pyspark.describe().show()
-
+df_pyspark.withcolumn().show()
