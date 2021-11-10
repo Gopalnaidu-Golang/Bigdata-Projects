@@ -15,4 +15,9 @@ K-Means clustering
 Collaborative filtering for recommander systems
 Natural language processing
 
+Data bricks
+Data frames
+Data sets
 
+Install jupitor editor using
+pip install pyspark
