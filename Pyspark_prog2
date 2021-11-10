@@ -1,0 +1,29 @@
+drop rows based on null
+filling the missing values
+replace null values with mean,median usinfg imputed func
+filter
+|&==
+~
+groupby and aggrigate fun
+
+df_pyspark.na.drop(how=any or all,thresh=2)
+df_pyspark.na.drop(how=any or all,subset=['age']).show()
+df_pyspark.na.fill('miss value')
+df_pyspark.na.fill('miss value','age')
+
+from pyspark.m1.feature import imputer
+imputer = Imputer(
+inputCols=['Name','Age']
+outputCols=["{}_imputed".format(c) for c in ['Name','Age'] ]
+).setStrategy('mesn')
+#add imputation columns to df
+imputer.fit(df_pyspark).transform(df_pyspark).show()
+
+filter:Salery of the emp lessthen or equal 10000
+df_pyspark.filter("salery <= 10000").show
+df_pyspark.filter("salery <= 10000").select(['name','age'])
+df_pyspark.filter(df_pyspary['salery'] <= 10000).show
+df_pyspark.filter((df_pyspary['salery'] <= 10000)&(df_pyspark(df_pyspary['salery'] > 10000))
+gouped to get max salery
+df_pyspark.groupby('name').sum().show()
+df_pyspark.agg({'salery'='sum'}).show()
