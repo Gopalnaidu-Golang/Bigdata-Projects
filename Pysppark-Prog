@@ -1,0 +1,37 @@
+Usecases:
+pyspark dataframes
+reading data set
+checking the datatypes of column
+selecting columns and indexing
+check describe option similer to pandas
+adding column and dropping columns
+Rename colums
+
+import pyspark to check properly installed
+
+import pandas as pd
+pd.read_csv('test.csv')
+when u r working with pyspark start with create session
+from pyspark.sql import SparkSession
+spark = SparkSession.builder.AppName('DataframePractice').getorCreate()
+#Read dataset with respect to spark
+df_pyspark=spark.read.csv('test.csv')
+df_pyspark
+df_pyspark.show()
+spark.read.option('header','true').csv('test.csv').show()
+df_pyspark=spark.read.option('header','true').csv('test.csv',inferSchemqa=true)
+type(df_pyspark)
+df_pyspark
+# check the schema
+df_pyspark.printschema()
+df_pyspark=spark.read.csv('test.csv',header=true, inferSchemqa=true)
+df_pyspark.show()
+df_pyspark.printschema()
+#show the columns
+df_pyspark.colummns()
+show only one column
+df_pyspark.select('coluumnname').show()
+show multiple columns
+df_pyspark.select(['coluumnname1,columnname2]').show()
+df_pyspark.describe().show()
+
