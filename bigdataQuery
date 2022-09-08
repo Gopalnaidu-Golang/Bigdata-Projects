@@ -1,0 +1,119 @@
+BIG data:
+https://www.interviewbit.com/big-data-interview-questions/
+
+Wt is bigdata?Big Data comprises structured, unstructured, and semi-structured data collected from varied sources.
+Integration
+Management
+Analusis
+Wt r 5v’s? value,vloume,Velocity,variety,veracity:how reliable the data is
+Why businesses are using Big Data for competitive advantage.
+Confident decision-building:
+Asset optimisation: 
+Cost reduction: 
+Improve customer engagement:
+Identify new revenue streams: 
+Hadoop is an open-source framework for saving, processing, and interpreting complex, disorganized data sets for obtaining insights and knowledge. So, that is how Hadoop and Big Data are related to each other. this framework permits distributed processing of enormous data sets using crosswise clusters of computers practicing simple programming models.
+
+the core components of Hadoop
+HDFS:extensive data is stored on HDFS.
+mapreduce:Map is a stage where data blocks are read and made available to the executors (computers /nodes /containers) for processing. Reduce is a stage where all processed data is collected and collated.
+YARN:real-time streaming, data science, and batch processing is done by YARN.
+features of Hadoop.
+Distributed processing:
+Open source:
+Fault tolerance:
+Scalability:
+Reliability:
+Benefits of HDFS over NFS: Apart from fault tolerance, HDFS helps to create multiple replicas of files. This reduces the traditional bottleneck of many clients accessing a single file. In addition, since files have multiple images on various physical disks, reading performance scales better than NFS.
+
+Kinds Of Data Models:
+Conceptual Data Model:
+Logical Data Model:
+Physical Data Model:
+How to deploy a Big Data Model?
+Deploying a model into a Big Data Platform involves mainly three key steps they are,
+* Data ingestion
+* Data Storage
+* Data Processing
+What is fsck?File System Check, used by HDFS. It is used to check discrepancies and if there is any difficulty in the file.
+What are the three modes that Hadoop can run?
+Local Mode or Standalone Mode:
+Pseudo-distributed Mode:
+Fully Distributed Mode:
+The common input formats in Hadoop are - 
+* Text Input Format: This is the default input format in Hadoop.
+* Key-Value Input Format: Used to read Plain Text Files in Hadoop.
+* Sequence File Input format: This is used to read Files in a sequence in Hadoop.
+The different Output formats in Hadoop are -
+* Textoutputformat: TextOutputFormat is the default output format in Hadoop.
+* Mapfileoutputformat: Mapfileoutputformat is used to write the output as map files in Hadoop.
+* DBoutputformat: DBoutputformat is just used for writing output in relational databases and Hbase.
+* Sequencefileoutputformat: Sequencefileoutputformat is used for writing sequence files.
+* SequencefileAsBinaryoutputformat: SequencefileAsBinaryoutputformat is used to write keys to a sequence file in binary format
+ Different techniques of Big Data Processing are:
+* Batch Processing of Big Data
+* Big Data Stream Processing 
+* Real-Time Big Data Processing
+* Map Reduce
+A MapReduce model has a map function that performs filtering and sorting and a reduced function, which serves as a summary operation.  t’s extensively used for querying and selecting data in the Hadoop Distributed File System (HDFS). A variety of queries may be done depending on the broad spectrum of MapReduce algorithms possible for creating data selections. In addition, MapReduce is fit for iterative computation involving large quantities of data requiring parallel processing. This is because it represents a data flow rather than a procedure. 
+Mention the core methods of Reducer.
+The core methods of a Reducer are:
+* setup(): setup is a method called just to configure different parameters for the reducer.
+* reduce(): reduce is the primary operation of the reducer. The specific function of this method includes defining the task that has to be worked on for a distinct set of values that share a key.
+* cleanup(): cleanup is used to clean or delete any temporary files or data after performing reduce() task.
+
+Explain the distributed Cache in the MapReduce framework.
+Explain overfitting in big data? How to avoid the same.
+There are several Methods to avoid Overfitting; some of them are:
+* Cross-validation: A cross-validation method refers to dividing the data into multiple small test data sets, which can be used to tune the model.  
+* Early stopping: After a certain number of iterations, the generalizing capacity of the model weakens; in order to avoid that, a method called early stopping is used in order to avoid Overfitting before the model crosses that point.                             
+* Regularization: this method is used to penalize all the parameters except intercept so that the model generalizes the data instead of Overfitting.
+What is a Zookeeper? What are the benefits of using a zookeeper?
+Benefits of using a Zookeeper are:
+* Simple distributed coordination process: The coordination process among all nodes in Zookeeper is straightforward.
+* Synchronization: Mutual exclusion and co-operation among server processes.
+* Ordered Messages: Zookeeper tracks with a number by denoting its order with the stamping of each update; with the help of all this, messages are ordered here.
+* Serialization: Encode the data according to specific rules. Ensure your application runs consistently.
+* Reliability: The zookeeper is very reliable. In case of an update, it keeps all the data until forwarded.
+* Atomicity: Data transfer either succeeds or fails, but no transaction is partial.
+
+What is the default replication factor in HDFS?3
+Mention features of Apache sqoop.
+* Robust: It is extremely robust and easy to use. In addition, it has community support and contribution.
+* Full Load: Loading a table in Sqoop can be done in one command. Multiple tables can also be loaded in the same process.
+* Incremental Load: Incremental load functionality is also supported. Whenever the table is updated, with the help of Sqoop, it can be loaded in parts too.
+* Parallel import/export: Importing and exporting of data is done by the YARN framework. It also provides fault tolerance too.
+* Import results of SQL query: It allows us to import the output from the SQL query into the Hadoop Distributed File System.
+
+Write the command used to copy data from the local system onto HDFS?
+hadoop fs –copyFromLocal [source][destination]
+
+What is partitioning in Hive?
+
+Feature selection Methods are -
+* Filters Method: In this method of variable ranking, we only consider the importance and usefulness of a feature.
+* Wrappers Method: In this method, ‘induction algorithm’ is used, Which can be used to produce a classifier.
+* Embedded Method: This method is a combination of efficiencies of both Filters and wrappers methods.
+
+How can you restart NameNode and all the daemons in Hadoop?
+ou can stop the NameNode with:
+./sbin /Hadoop-daemon.sh start, stop
+You can stop all the daemons with:
+./sbin/stop-all.sh
+./sbin/start-all.sh
+What are missing values in Big data? And how to deal with it?
+Mean or Median Imputation:
+Multivariate Imputation by Chained Equations (MICE):
+Random Forest:
+What are the things to consider when using distributed cache in Hadoop MapReduce?
+* Heterogeneity: The design of applications should allow the users to access services and run applications over a heterogeneous collection of computers and networks, considering hardware devices, OS, Network, Programming languages.
+* Transparency: Distributed system Designers must hide the complexity of the system as much as they can. Some Terms of transparency are location, access, migration, relocation, and so on.
+* Openness: It is a characteristic that determines whether the system can be extended and reimplemented in various ways.
+* Security: Distributed system Designers must take care of confidentiality, integrity, and availability.
+* Scalability: A system is said to be scalable if it can manage the increase of users and resources without undergoing a striking loss of performance.
+
+
+https://www.interviewbit.com/big-data-interview-questions/
+
+
+
